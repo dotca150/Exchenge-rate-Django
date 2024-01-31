@@ -8,16 +8,19 @@
 </head>
 <body>
 <header>
+    {#    <div class="logo-title">#}
+    {#        <h2>Exchange.io</h2>#}
+    {#    </div>#}
     <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlctSTjzAeDe-Q_U3CpuO7BiWvigh2ehDbrw&usqp=CAU">
+        <h2>Exchange.io</h2>
+        <img src="{% static "image/pngwing.com.png" %}">
     </div>
 
     <nav class="inline-menu">
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Services</a></li>
-            <li><a>Community</a></li>
-            <li><a>Currency</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Currency</a></li>
         </ul>
     </nav>
 </header>
@@ -26,21 +29,17 @@
 
 <footer>
     <div class="footer-content">
-        <div class="footer-section about">
+        <div class="footer-section-about">
             <h2>About Us</h2>
             <p>Currency Exchange</p>
         </div>
-        <div class="footer-section links">
-            <h2>Links</h2>
-            <ul>
-                <li><a>Home</a></li>
-                <li><a>Map</a></li>
-            </ul>
-        </div>
-        <div class="footer-section contacts">
+        <div class="footer-section-contacts">
             <h2>Contacts</h2>
-            <p>gmail@gmail.com</p>
-            <p>+380639523264</p>
+            <ul>
+                <li><a href="https://www.google.com/maps/place/Gunnersbury+School/@51.4926773,-0.3173563,17z/data=!3m1!4b1!4m6!3m5!1s0x48760dbd77d85f17:0xed114ce0ab8eaceb!8m2!3d51.492674!4d-0.3147814!16s%2Fm%2F03c99sg?entry=ttu">Map</a></li>
+                <li><a href="mailto:mail@gmail.com">mail@gmail.com</a></li>
+                <li><a href="tel:+380639523264">+380639523264</a></li>
+            </ul>
         </div>
     </div>
 </footer>

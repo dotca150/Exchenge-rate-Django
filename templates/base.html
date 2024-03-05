@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/main.css" %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Exchange.io</h2>
+            <img src="{% static "image/pngwing.com.png" %}">
+        </div>
+        <nav class="inline-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Currency</a></li>
+                <li><a href="#">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section-about">
+                <h2>About Us</h2>
+                <p>Currency Exchange</p>
+            </div>
+            <div class="footer-section-contacts">
+                <h2>Contacts</h2>
+                <ul>
+                    <li><a href="mailto:mail@gmail.com">mail@gmail.com</a></li>
+                    <li><a href="tel:+380639523264">+380639523264</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+{% block afterscripts %}
+{% endblock %}
+</body>
+</html>

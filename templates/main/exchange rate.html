@@ -1,49 +1,46 @@
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exchange Rate</title>
-    <link href="{% static "css/main.css" %}" rel="stylesheet" type="text/css">
-</head>
-<body>
-<header>
-    {#    <div class="logo-title">#}
-    {#        <h2>Exchange.io</h2>#}
-    {#    </div>#}
-    <div class="logo">
-        <h2>Exchange.io</h2>
-        <img src="{% static "image/pngwing.com.png" %}">
-    </div>
+{% extends 'base.html' %}
 
-    <nav class="inline-menu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Currency</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="content">
-</div>
+{% block content %}
+    <div class="content-card-lite content-cards__card card-main">
+        <div class="content-cards__card__inner background--transparent border--dove-5  content-cards__card--rounded">
+            <div class="card-content">
+                <div id="cc-main-conversion-block">
+                    <div class="conversion-block1">
+                        <h3>Convert From</h3>
+                        <div class="currency-input1">
+                            <label for="amount">Amount:</label>
+                            <input type="number" id="amount" name="amount" placeholder="Enter amount..." required>
+                        </div>
+                        <div class="currency-input2">
+                            <label for="fromCurrency">Currency:</label>
+                            <select id="fromCurrency" name="fromCurrency">
+                                <option value="USD">US Dollar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="conversion-block2">
+                        <h3>Convert To</h3>
+                        <div class="currency-output">
+                            <label for="toCurrency">Amount:</label>
+                            <input type="number" id="amount" name="amount" required placeholder="Enter amount...">
+                        </div>
+                        <div class="currency-input3">
+                            <label for="toCurrency">Currency:</label>
+                            <select id="toCurrency" name="toCurrency">
+                                <option value="UAH">Ukrainian Hryvnia</option>
+                            </select>
+                        </div>
+                    </div>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-section-about">
-            <h2>About Us</h2>
-            <p>Currency Exchange</p>
+                    <div class="conversion-block">
+                        <button type="submit" id="convert-bottom"><a> Convert </a></button>
+                    </div>
+                </div>
+                <div class="card-content-row indexed-cc-page">
+                    <div id="result"></div>
+                </div>
+            </div>
+            <div class="card-context text"></div>
         </div>
-        <div class="footer-section-contacts">
-            <h2>Contacts</h2>
-            <ul>
-                <li><a href="https://www.google.com/maps/place/Gunnersbury+School/@51.4926773,-0.3173563,17z/data=!3m1!4b1!4m6!3m5!1s0x48760dbd77d85f17:0xed114ce0ab8eaceb!8m2!3d51.492674!4d-0.3147814!16s%2Fm%2F03c99sg?entry=ttu">Map</a></li>
-                <li><a href="mailto:mail@gmail.com">mail@gmail.com</a></li>
-                <li><a href="tel:+380639523264">+380639523264</a></li>
-            </ul>
-        </div>
     </div>
-</footer>
-
-
-</body>
-</html>
+{% endblock %}
